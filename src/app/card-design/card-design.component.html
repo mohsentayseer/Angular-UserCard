@@ -1,0 +1,18 @@
+<div class="card col align-items-center p-3 bg-light m-3 border border-2 border-info">
+  <img
+    class="card-img-top rounded-circle border border-4 border-info p-2 w-75"
+    [src]="user.image"
+    alt="Card image cap"
+  />
+  <div class="card-body text-center fw-bold fs-5">
+    <p>
+      {{ user.username
+      }}<fa-icon
+        [ngStyle]="{ 'color': user.is_verified ? 'greenyellow' : 'red' }"
+        [icon]="faStar"
+      ></fa-icon>
+    </p>
+    <p>{{ user.email }}</p>
+    <p>{{ user.phone }}</p>
+  </div>
+</div>
